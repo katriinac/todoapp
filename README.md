@@ -27,7 +27,7 @@ Esimerkki kuvan lisäämisestä:
 ## Verkkolinkit
 
 - **Julkaistu sovellus:** [Lisää tähän GitHub Pages -osoite](https://yourusername.github.io/your-repository/)
-- **GitHub-repositorio:** [Lisää tähän repositorion osoite](https://github.com/katriinac/todoapp)
+- **GitHub-repositorio:** [https://github.com/katriinac/todoapp](https://github.com/katriinac/todoapp)
 - **Projektin videoesittely:** [Lisää tähän videon osoite](https://example.com/)
 
 ## Tietoja sovelluksesta
@@ -64,7 +64,6 @@ Kirjoita lyhyet käyttöohjeet sovellukselle.
 
 Lisää tähän vähintään yksi kuvakaappaus toimivasta sovelluksestasi.
 
-Esimerkki kuvan lisäämisestä:
 
 ![Kuvakaappaus sovelluksesta](img/screenshot.png)
 
