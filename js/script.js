@@ -2,11 +2,15 @@ const inputTask = document.getElementById("inputTask");
 const inputCategory = document.getElementById("inputCategory");
 const addButton = document.getElementById("addButton");
 const taskList = document.querySelector("#taskList")
+const categorySelect = document.querySelector("#categorySelect");
 
 addButton.addEventListener("click",function(){
     const task = inputTask.value;
     const category = inputCategory.value;
     const newTask = document.createElement("li");
+    const newCategory = document.createElement("option");
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
 
     if(task.length < 3){
         inputTask.style.border = "2px solid red";
@@ -14,11 +18,14 @@ addButton.addEventListener("click",function(){
     else{
         if (category != ""){
             newTask.id = category;
+            newCategory.textContent =category;
+            categorySelect.appendChild(newCategory);
         }
         inputTask.style.border = "";
-        newTask.textContent = task;
-    
+        newTask.appendChild(checkbox);
+        newTask.appendChild(document.createTextNode(task));
         taskList.appendChild(newTask);
         inputTask.value = "";
+        inputCategory.value = "";
     }
 });
