@@ -26,6 +26,7 @@ addButton.addEventListener("click",function(){
         taskList.appendChild(newTask);
         inputTask.value = "";
         taskDone();
+        showList();
     }
 });
 
