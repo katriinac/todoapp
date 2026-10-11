@@ -71,6 +71,7 @@ li button{
     height: 20px;
     float: right;
     background-color: rgb(233, 202, 253);
+    box-shadow: 2px 2px rgb(241, 169, 241);
 }
 #showAll{
    appearance: none;
