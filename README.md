@@ -62,7 +62,8 @@ Listaa vähintään kolme sovellukseesi suunniteltua toimintoa:
 
 ## Tunnetut virheet / puutteet
 
-Punainen reunus häviää inpustista vasta, kun uusi tehtävä on lisätty.
+- Punainen reunus häviää inpustista vasta, kun uusi tehtävä on lisätty.
+- Jos ei ole aktiivista tai valmista tehtävää kun active/completed nappia painetaan, näyttää sovellus tyhjää.
 
 ## Oma arvio ja oppimisen reflektointi
 

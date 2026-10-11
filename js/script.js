@@ -27,8 +27,16 @@ addButton.addEventListener("click",function(){
         const newTask = document.createElement("li");
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
-//When checked it will mark it as done
-        checkbox.addEventListener("change", taskDone);
+//When checked it will mark it as done and overline the text
+        checkbox.addEventListener("change", function(){
+            if(checkbox.checked){
+                newTask.classList.add("checked");
+            }
+            else{
+                newTask.classList.remove("checked");
+            }
+            taskDone();
+        });
 //adding delete button
         const deleteButton = document.createElement("button");
         deleteButton.id = "btn" + deleteButtonId;

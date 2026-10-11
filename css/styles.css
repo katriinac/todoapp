@@ -125,3 +125,6 @@ li button{
     box-shadow: 2px 2px rgb(241, 169, 241);
     font-family: monospace;
 }
+.checked{
+    text-decoration: line-through;
+}
