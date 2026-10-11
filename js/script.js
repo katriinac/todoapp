@@ -6,25 +6,31 @@ const showAll = document.querySelector("#showAll");
 const activeButton = document.querySelector("#active");
 const completedButton = document.querySelector("#completed");
 let deleteButtonId = 1;
+const charcount = document.querySelector("#charcount");
+
+//Adding a charcount under the input
+inputTask.addEventListener("input", function(){
+    const task = inputTask.value;
+    charcount.textContent = task.length + " / 100";
+});
 
 //Adding needed variables and functions for tasks
 addButton.addEventListener("click",function(){
-    const task = inputTask.value;
-    const newTask = document.createElement("li");
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-//When checked it will mark it as done
-    checkbox.addEventListener("change", taskDone);
-//adding delete button
-    const deleteButton = document.createElement("button");
-//Id to button
-    deleteButton.id = "btn" + deleteButtonId;
-//Check that the input is over 2 characters long
-    if(task.length < 3){
+    const task = inputTask.value.trim();
+//Checking the length
+    if(task.length < 3 || task.length > 100){
         inputTask.style.border = "2px solid red";
-        alert("The task needs to be at least 3 characters long!")
+        alert("The task needs to be 3-100 characters long!")
     }
     else{
+        const newTask = document.createElement("li");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+//When checked it will mark it as done
+        checkbox.addEventListener("change", taskDone);
+//adding delete button
+        const deleteButton = document.createElement("button");
+        deleteButton.id = "btn" + deleteButtonId;
 //Adding the tasks with checkmarks and dlete buttons, and clearing input
         newTask.appendChild(checkbox);
         newTask.appendChild(document.createTextNode(task));
@@ -32,6 +38,7 @@ addButton.addEventListener("click",function(){
         taskList.appendChild(newTask);
         inputTask.value = "";
         inputTask.style.border = "";
+        charcount.textContent = "0 / 100";
 //Deleting the task when delete button is pressed
         deleteButton.addEventListener("click", function(){
             newTask.remove();

@@ -20,6 +20,7 @@ ul {
     list-style-type: none;
     font-family: monospace;
     font-size: 15px;
+    padding-left: 0;
 }
 input {
     border-radius: 10px;
@@ -27,6 +28,7 @@ input {
     background-color: white;
     padding: 3px;
     box-shadow: 2px 2px rgb(241, 169, 241);
+    width: 300px;
 }
 input:focus{
     outline: none;
@@ -74,6 +76,7 @@ li button{
     float: right;
     background-color: rgb(233, 202, 253);
     box-shadow: 2px 2px rgb(241, 169, 241);
+    margin-right: 50px;
 }
 #taskDone{
    font-size: 14px; 
@@ -88,6 +91,7 @@ li button{
     background-color: #e5defa;
     box-shadow: 2px 2px rgb(241, 169, 241); 
     font-family: monospace;
+    margin-left: 200px;
 }
 #active{
     appearance: none;
