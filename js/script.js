@@ -5,26 +5,42 @@ const taskList = document.querySelector("#taskList");
 const showAll = document.querySelector("#showAll");
 const activeButton = document.querySelector("#active");
 const completedButton = document.querySelector("#completed");
+let deleteButtonId = 1;
 
-//Adding needed variables for tasks
+//Adding needed variables and functions for tasks
 addButton.addEventListener("click",function(){
     const task = inputTask.value;
     const newTask = document.createElement("li");
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
+//When checked it will mark it as done
     checkbox.addEventListener("change", taskDone);
-//Check that the task is over 2 characters long
+//adding delete button
+    const deleteButton = document.createElement("button");
+//Id to button
+    deleteButton.id = "btn" + deleteButtonId;
+//Check that the input is over 2 characters long
     if(task.length < 3){
         inputTask.style.border = "2px solid red";
         alert("The task needs to be at least 3 characters long!")
     }
     else{
-//Addind the tasks and clearing input
-        inputTask.style.border = "";
+//Adding the tasks with checkmarks and dlete buttons, and clearing input
         newTask.appendChild(checkbox);
         newTask.appendChild(document.createTextNode(task));
+        newTask.appendChild(deleteButton);
         taskList.appendChild(newTask);
         inputTask.value = "";
+//Deleting the task when delete button is pressed
+        deleteButton.addEventListener("click", function(){
+            newTask.remove();
+//Calling the functions to update how many tasks are left & done
+            taskDone();
+            showList();
+        });
+//Changing value of deletebuttonid so that all buttons have different ids
+        deleteButtonId++;
+//Calling the functions again to update tasks left & lone text
         taskDone();
         showList();
     }
@@ -34,12 +50,14 @@ addButton.addEventListener("click",function(){
 function taskDone() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let tasksDone = 0;
+//Loop to check how many boxes are checked
     for (let checkbox of checkboxes) {
         if(checkbox.checked){
             tasksDone = tasksDone + 1;
         }
     }
     const allTasks = checkboxes.length;
+//Making visible how many tasks a person has done
     document.getElementById("taskDone").textContent = tasksDone + "/" + allTasks;
 };
 
