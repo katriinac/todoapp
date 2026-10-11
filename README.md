@@ -15,13 +15,9 @@ Listaa vähintään kolme sovellukseesi suunniteltua toimintoa:
 - Toiminto 1: Lisää tehtäviä.
 - Toiminto 2: Poista tehtäviä.
 - Toiminto 3: Merkkaa tehtävät valmiiksi.
-- Toiminto 4: Fitteröi tehtäviä Valimis/Kesken nappulalla.
+- Toiminto 4: Fitteröi tehtäviä Valimis/Kesken nappuloilla.
 
 ### Rautalankamalli / luonnos
-
-Lisää tähän kuva käsin piirtämästäsi tai digitaalisesti tehdystä sovelluksen luonnoksesta. Luonnoksessa tulee näkyä sovelluksen pääasiallinen näkymä ja tärkeimmät elementit.
-
-Esimerkki kuvan lisäämisestä:
 
 ![Rautalankamalli](img/todoapp.png)
 
@@ -33,13 +29,9 @@ Esimerkki kuvan lisäämisestä:
 
 ## Tietoja sovelluksesta
 
-**[To Do]** on verkkosovellus, joka ...
-
-Kuvaile lyhyesti sovelluksen tarkoitus ja tärkeimmät toiminnot.
+**[To Do]** on verkkosovellus, johon voi lisätä tehtäviä mitä haluaa suorittaa. Kun tehtävät ovat suoritettu, niin ne merkataan valmiiksi. Valmiita tai keskeneräisiä tehtäviä voi tarkastella nappien avulla. Tehtävät voi poistaa tarvittaessa.
 
 ## Teknologiat
-
-Kuvaile, mitä teknologioita käytit ja mikä niiden rooli oli projektissasi.
 
 - HTML – sivun rakenne
 - CSS – ulkoasu ja asettelu
@@ -48,11 +40,14 @@ Kuvaile, mitä teknologioita käytit ja mikä niiden rooli oli projektissasi.
 
 ## Sovelluksen käyttö
 
-Kirjoita lyhyet käyttöohjeet sovellukselle.
-
 1. Avaa julkaistu sovellus yllä olevasta linkistä.
-2. Täytä lomakkeen kentät.
-3. Lisää, muokkaa, poista tai merkitse kohteita tehdyiksi.
+2. Täytä lomakkeen kenttä.
+3. Lisää kohde valmiiksi.
+4. Listää toinen kohde.
+5. Tarkista kohteiden näkyvyyttä Active tai Completed napilla.
+6. Paina All nappia.
+7. Poista valmiit kohdat.
+----- kesken
 4. Päivitä sivu ja tarkista, säilyvätkö tiedot selaimessa, jos käytit localStoragea.
 
 ## Sovelluksen käynnistäminen paikallisesti
@@ -63,38 +58,47 @@ Kirjoita lyhyet käyttöohjeet sovellukselle.
 
 ## Kuvakaappaukset
 
-Lisää tähän vähintään yksi kuvakaappaus toimivasta sovelluksestasi.
-
-
-![Kuvakaappaus sovelluksesta](img/screenshot.png)
+![Kuvakaappaus sovelluksesta](img/completed.png)
 
 ## Tunnetut virheet / puutteet
 
-Kerro, jos sovelluksessa on tunnettuja virheitä, puuttuvia toimintoja tai muita rajoituksia.
-
-Jos tunnettuja virheitä ei ole, kirjoita: **Ei tunnettuja virheitä.**
+Punainen reunus häviää inpustista vasta, kun uusi tehtävä on lisätty.
 
 ## Oma arvio ja oppimisen reflektointi
 
 Pohdi työtäsi ja oppimisprosessiasi.
 
-- Missä onnistuin?
-- Mikä oli haastavaa?
-- Mitä parantaisin, jos aikaa olisi enemmän?
-- Mitä opin HTML:stä, CSS:stä, JavaScriptistä ja DOM-skriptauksesta?
-- Mikä jäi epäselväksi tai mistä haluaisin oppia lisää?
-- Oma arvio projektista: **xx/10 pistettä**
+- Missä onnistuin? Sain mielestäni hyvin rakennettua toimivan sovelluksen ja kaikki vaatimukset toteutuvat.
+- Mikä oli haastavaa? CSS:n lisääminen sivulle, checkboxien lisääminen ja poisto-toiminnon lisääminen.
+- Mitä parantaisin, jos aikaa olisi enemmän? Jakaisin koodin selkeämmin osiin ja miettisin tapoja, miten voisin kirjoittaa koodin helpommin/lyhyemmin. Panostaisin vielä enemmän ulkonäköön.
+- Mitä opin HTML:stä, CSS:stä, JavaScriptistä ja DOM-skriptauksesta? Käyttämällä näitä kaikkia, pystyy rakentamaan kaikenlaisia pieniä verkkosovelluksia.
+- Oma arvio projektista: **10/10 pistettä**
 
 ## Lähteet ja kiitokset
 
-Listaa kaikki projektissa käyttämäsi lähteet, tutoriaalit, kuvat ja koodiesimerkit.
+Käytin enimmäkseen aijemmin tehtyjeni Workshop tehtäviä apuna koodin luomiseen (enimmäkseen workshop03 ja workshop04).
+Käytin myös paljon W3schools esimerkkejä apuna (enimmäkseen CSS).
 
-Jos käytit ChatGPT:tä, GitHub Copilotia tai muuta tekoälytyökalua, mainitse se tässä ja kerro lyhyesti, miten se tuki työskentelyäsi.
+- [HTML DOM Input Checkbox Object](https://www.geeksforgeeks.org/html/html-dom-input-checkbox-object/) Käytin tutoriaalia apuna valintaruutujen luomiseen.
 
-- [Lähteen tai tutoriaalin nimi](https://example.com/)
-- [Kuvalähde](https://example.com/)
-- Käytetty tekoälytyökalu: ...
-  - Miten työkalua käytettiin: ...
+- [How to get all checked checkbox values using JavaScript by Joshua Colvin](https://www.joshuacolvin.net/blog/selected-checkbox-values/) Opin tutoriaalista, että voin käyttää querySelectorAll ja :checked, jonka avuilla sain tehtävät näkyviin painikkeita painaessa.
+
+- [HTML DOM Document createTextNode()](https://www.w3schools.com/jsref/met_document_createtextnode.asp) Opin miten createTextNode toimii.
+
+- [CSS Margins](https://www.w3schools.com/css/css_margin.asp) Opin, mitä eri margin ominaisuudet tekee ja mitä niistä tarvitsen projektiini.
+
+- [CSS Fonts](https://www.w3schools.com/css/css_font.asp) Etin fontin projektiini.
+
+- Kaikki käyttämät kuvat olen luonut itse käyttämällä paint.net ohjelmaa.
+
+- Käytetty tekoälytyökalu: ChatGPT
+
+  - Miten työkalua käytettiin: Kohteen poistettua, en saanut päivitettyä "tasks done 0/2" kohtaa (laski edelleen tehtäviä mitkä oli poistettu.). Kysyin tekoälyltä mitä koodissa oli vikana ja sain vastaukseksi selityksen, mikä ja missä oli vikaa. Olin merkannut funktiokutsut väärään kohtaan.
+
+  - Kysyin miten saan jokaiselle poisto-napille oman id:n. Laitoin osan koodistani tekoälyyn, joka sitten neuvoi lisäämään osan koodia joka kasvattaa ID muuttujaa, jotta kaikilla näppäimillä olisi eri id.
+
+  - Kysyin apua miten pystyn muokkaamaan valintaruudun ulkonäköä, siten että siihen jää ✓ näkyviin kun sitä on painettu. Sain vastaukseksi "input[type="checkbox"]:checked::after" kohdan css tiedostossa.
+
 
   ## Lisenssi
 

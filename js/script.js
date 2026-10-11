@@ -7,6 +7,7 @@ const activeButton = document.querySelector("#active");
 const completedButton = document.querySelector("#completed");
 let deleteButtonId = 1;
 const charcount = document.querySelector("#charcount");
+//const saveButton = document.querySelector("#save");
 
 //Adding a charcount under the input
 inputTask.addEventListener("input", function(){
@@ -99,3 +100,5 @@ completedButton.addEventListener("click", function(){
         checkbox.parentElement.hidden = true;
     }
 });
+
+//saveButton.addEventListener("click", save);
