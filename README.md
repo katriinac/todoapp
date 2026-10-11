@@ -6,15 +6,16 @@
 
 ### Projektin idea
 
-Kuvaile lyhyesti, mitä sovelluksesi tekee ja kenelle se on tarkoitettu.
+Sovellus mihin voi merkata tehtäviä, mitä pitää suorittaa. Tehtävät merkataan valmiiksi kun ne ovat suoritettu. Sovellus sopii esimeksiksi opiskelijalle, jolla on paljon kurssitehtäviä.
 
 ### Suunnitellut toiminnot
 
 Listaa vähintään kolme sovellukseesi suunniteltua toimintoa:
 
-- Toiminto 1
-- Toiminto 2
-- Toiminto 3
+- Toiminto 1: Lisää tehtäviä.
+- Toiminto 2: Poista tehtäviä.
+- Toiminto 3: Merkkaa tehtävät valmiiksi.
+- Toiminto 4: Fitteröi tehtäviä Valimis/Kesken nappulalla.
 
 ### Rautalankamalli / luonnos
 
@@ -32,7 +33,7 @@ Esimerkki kuvan lisäämisestä:
 
 ## Tietoja sovelluksesta
 
-**[Projektin nimi]** on verkkosovellus, joka ...
+**[To Do]** on verkkosovellus, joka ...
 
 Kuvaile lyhyesti sovelluksen tarkoitus ja tärkeimmät toiminnot.
 
