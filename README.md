@@ -80,15 +80,15 @@ Pohdi työtäsi ja oppimisprosessiasi.
 Käytin enimmäkseen aijemmin tehtyjeni Workshop tehtäviä apuna koodin luomiseen (enimmäkseen workshop03 ja workshop04).
 Käytin myös paljon W3schools esimerkkejä apuna (enimmäkseen CSS).
 
-- [HTML DOM Input Checkbox Object](https://www.geeksforgeeks.org/html/html-dom-input-checkbox-object/) Käytin tutoriaalia apuna valintaruutujen luomiseen.
+- [HTML DOM Input Checkbox Object - GeeksForGeeks](https://www.geeksforgeeks.org/html/html-dom-input-checkbox-object/) Käytin tutoriaalia apuna valintaruutujen luomiseen.
 
 - [How to get all checked checkbox values using JavaScript by Joshua Colvin](https://www.joshuacolvin.net/blog/selected-checkbox-values/) Opin tutoriaalista, että voin käyttää querySelectorAll ja :checked, jonka avuilla sain tehtävät näkyviin painikkeita painaessa.
 
-- [HTML DOM Document createTextNode()](https://www.w3schools.com/jsref/met_document_createtextnode.asp) Opin miten createTextNode toimii.
+- [HTML DOM Document createTextNode() W3Schools](https://www.w3schools.com/jsref/met_document_createtextnode.asp) Opin miten createTextNode toimii.
 
-- [CSS Margins](https://www.w3schools.com/css/css_margin.asp) Opin, mitä eri margin ominaisuudet tekee ja mitä niistä tarvitsen projektiini.
+- [CSS Margins W3Schools](https://www.w3schools.com/css/css_margin.asp) Opin, mitä eri margin ominaisuudet tekee ja mitä niistä tarvitsen projektiini.
 
-- [CSS Fonts](https://www.w3schools.com/css/css_font.asp) Etin fontin projektiini.
+- [CSS Fonts W3Schools](https://www.w3schools.com/css/css_font.asp) Etin fontin projektiini.
 
 - Kaikki käyttämät kuvat olen luonut itse käyttämällä paint.net ohjelmaa.
 
