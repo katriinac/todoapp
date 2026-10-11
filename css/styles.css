@@ -44,6 +44,10 @@ input:focus{
     font-family: monospace;
     margin-left: 8px;
 }
+#charcount{
+    font-size: 14px; 
+    font-family: monospace;
+}
 input[type="checkbox"] {
     appearance: none;
     width: 20px;
