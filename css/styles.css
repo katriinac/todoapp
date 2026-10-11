@@ -12,8 +12,32 @@ body {
     border: 2px solid #b2a2de;
     background-color: rgb(252, 214, 240);
 }
+h1{
+    font-family: monospace;
+    text-shadow: 2px 2px rgb(241, 169, 241);
+}
 ul {
     list-style-type: none;
+    font-family: Arial;
+}
+input {
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: white;
+    padding: 3px;
+    box-shadow: 2px 2px rgb(241, 169, 241);
+}
+input:focus{
+    outline: none;
+}
+#addButton{
+    appearance: none;
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    border-radius: 10%;
+    background-color: #e5defa;
+    box-shadow: 2px 2px rgb(241, 169, 241);
 }
 input[type="checkbox"] {
     appearance: none;
@@ -26,21 +50,52 @@ input[type="checkbox"] {
     align-items: center;
     justify-content: center;
     vertical-align: middle;
+    box-shadow: 2px 2px rgb(241, 169, 241);
+    margin-right: 50px;
 }
 input[type="checkbox"]:checked{
     background-color: #b9a2de;
+    box-shadow: 2px 2px rgb(241, 169, 241);
 }
 input[type="checkbox"]:checked::after {
     content: "✓";
     color: rgb(4, 4, 4);
     font-size: 14px;
+    
 }
-input {
-    border-radius: 10px;
-    border: 2px solid white;
-    background-color: white;
-    padding: 3px;
+li button{
+    background-image: url("../img/x.png");
+    background-size: contain;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    float: right;
+    background-color: rgb(233, 202, 253);
 }
-input:focus{
-    outline: none;
+#showAll{
+   appearance: none;
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    border-radius: 10%;
+    background-color: #e5defa;
+    box-shadow: 2px 2px rgb(241, 169, 241); 
+}
+#active{
+    appearance: none;
+    width: 55px;
+    height: 25px;
+    text-align: center;
+    border-radius: 10%;
+    background-color: #e5defa;
+    box-shadow: 2px 2px rgb(241, 169, 241);
+}
+#completed{
+    appearance: none;
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    border-radius: 10%;
+    background-color: #e5defa;
+    box-shadow: 2px 2px rgb(241, 169, 241);
 }

@@ -31,6 +31,7 @@ addButton.addEventListener("click",function(){
         newTask.appendChild(deleteButton);
         taskList.appendChild(newTask);
         inputTask.value = "";
+        inputTask.style.border = "";
 //Deleting the task when delete button is pressed
         deleteButton.addEventListener("click", function(){
             newTask.remove();
