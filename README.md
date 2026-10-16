@@ -10,8 +10,6 @@ Sovellus mihin voi merkata tehtäviä, mitä pitää suorittaa. Tehtävät merka
 
 ### Suunnitellut toiminnot
 
-Listaa vähintään kolme sovellukseesi suunniteltua toimintoa:
-
 - Toiminto 1: Lisää tehtäviä.
 - Toiminto 2: Poista tehtäviä.
 - Toiminto 3: Merkkaa tehtävät valmiiksi.
@@ -48,7 +46,7 @@ Listaa vähintään kolme sovellukseesi suunniteltua toimintoa:
 6. Paina All nappia.
 7. Poista valmiit kohdat.
 ----- kesken
-4. Päivitä sivu ja tarkista, säilyvätkö tiedot selaimessa, jos käytit localStoragea.
+8. Päivitä sivu ja tarkista, säilyvätkö tiedot selaimessa, jos käytit localStoragea.
 
 ## Sovelluksen käynnistäminen paikallisesti
 
@@ -77,7 +75,8 @@ Pohdi työtäsi ja oppimisprosessiasi.
 
 ## Lähteet ja kiitokset
 
-Käytin enimmäkseen aijemmin tehtyjeni Workshop tehtäviä apuna koodin luomiseen (enimmäkseen workshop03 ja workshop04).
+Käytin aijemmin tehtyjeni Workshop tehtäviä apuna koodin luomiseen (enimmäkseen workshop03 ja workshop04). (https://github.com/katriinac/web-development-1)
+
 Käytin myös paljon W3schools esimerkkejä apuna (enimmäkseen CSS).
 
 - [HTML DOM Input Checkbox Object - GeeksForGeeks](https://www.geeksforgeeks.org/html/html-dom-input-checkbox-object/) Käytin tutoriaalia apuna valintaruutujen luomiseen.
@@ -94,7 +93,7 @@ Käytin myös paljon W3schools esimerkkejä apuna (enimmäkseen CSS).
 
 - Käytetty tekoälytyökalu: ChatGPT
 
-  - Miten työkalua käytettiin: Kohteen poistettua, en saanut päivitettyä "tasks done 0/2" kohtaa (laski edelleen tehtäviä mitkä oli poistettu.). Kysyin tekoälyltä mitä koodissa oli vikana ja sain vastaukseksi selityksen, mikä ja missä oli vikaa. Olin merkannut funktiokutsut väärään kohtaan.
+  - Miten työkalua käytettiin: Tehtävän poistettua, en saanut päivitettyä "tasks done 0/2" kohtaa (laski edelleen tehtäviä mitkä oli poistettu.). Kysyin tekoälyltä mitä koodissa oli vikana ja sain vastaukseksi selityksen, mikä ja missä oli vikaa. Olin merkannut funktiokutsut väärään kohtaan, jonka takia se ei päivittänyt tehtävien määrää.
 
   - Kysyin miten saan jokaiselle poisto-napille oman id:n. Laitoin osan koodistani tekoälyyn, joka sitten neuvoi lisäämään osan koodia joka kasvattaa ID muuttujaa, jotta kaikilla näppäimillä olisi eri id.
 
