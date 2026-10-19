@@ -5,67 +5,120 @@ const taskList = document.querySelector("#taskList");
 const showAll = document.querySelector("#showAll");
 const activeButton = document.querySelector("#active");
 const completedButton = document.querySelector("#completed");
-let deleteButtonId = 1;
 const charcount = document.querySelector("#charcount");
-//const saveButton = document.querySelector("#save");
+const inputError = document.querySelector("#inputError");
 
-//Adding a charcount under the input
+let deleteButtonId = 1;
+
+//updating a charcount under the input
 inputTask.addEventListener("input", function(){
     const task = inputTask.value;
     charcount.textContent = task.length + " / 100";
 });
 
-//Adding needed variables and functions for tasks
-addButton.addEventListener("click",function(){
+//validtaing the input before the task is created
+function validate(){
     const task = inputTask.value.trim();
-//Checking the length
+//Checking the lenght of input
     if(task.length < 3 || task.length > 100){
         inputTask.style.border = "2px solid red";
-        alert("The task needs to be 3-100 characters long!")
+        inputError.textContent = "The task needs to be 3-100 characters long!";
+        return false;
     }
-    else{
-        const newTask = document.createElement("li");
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-//When checked it will mark it as done and overline the text
-        checkbox.addEventListener("change", function(){
-            if(checkbox.checked){
-                newTask.classList.add("checked");
-            }
-            else{
-                newTask.classList.remove("checked");
-            }
-            taskDone();
-        });
-//adding delete button
-        const deleteButton = document.createElement("button");
-        deleteButton.id = "btn" + deleteButtonId;
-//Adding the tasks with checkmarks and dlete buttons, and clearing input
-        newTask.appendChild(checkbox);
-        newTask.appendChild(document.createTextNode(task));
-        newTask.appendChild(deleteButton);
-        taskList.appendChild(newTask);
-        inputTask.value = "";
-        inputTask.style.border = "";
-        charcount.textContent = "0 / 100";
-//Deleting the task when delete button is pressed
-        deleteButton.addEventListener("click", function(){
-            newTask.remove();
-//Calling the functions to update how many tasks are left & done
-            taskDone();
-            showList();
-        });
-//Changing value of deletebuttonid so that all buttons have different ids
-        deleteButtonId++;
-//Calling the functions again to update tasks left & lone text
+//it the text is 3-100 characters long, it returns true and clears the border style
+    inputTask.style.border = "";
+    inputError.textContent ="";
+    return true;
+}
+
+//function to create checkboxes
+function createCheckbox(newTask){
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+//when checked, it adds/removes the css classes
+    checkbox.addEventListener("change", function(){
+        if(checkbox.checked){
+            newTask.classList.add("checked");
+        }
+        else{
+            newTask.classList.remove("checked");
+        }
+//update the tasks done part
+        taskDone();
+        saveTask();
+    });
+    return checkbox;
+}
+
+//creates the delete button to delete the tasks
+function createDeleteButton(newTask){
+    const deleteButton = document.createElement("button");
+//all button will have different ids
+    deleteButton.id = "btn" + deleteButtonId;
+    deleteButtonId++;
+//event to delete the task when button is pressed
+    deleteButton.addEventListener("click", function(){
+        newTask.remove();
+//update the tasks done part
+        taskDone();
+        saveTask();
+    });
+    return deleteButton;
+}
+
+//function to create a task. new task is unchecked by default
+function createTasks(task, completed = false){
+    const newTask = document.createElement("li");
+//save the task text into list item
+newTask.dataset.task = task;
+//call the functions above
+    const checkbox = createCheckbox(newTask);
+    const deleteButton = createDeleteButton(newTask);
+//save the checkbox status
+    checkbox.checked = completed;
+    if(completed){
+        newTask.classList.add("checked");
+    }
+//adds all the elements into the task
+    newTask.appendChild(checkbox);
+    newTask.appendChild(document.createTextNode(task));
+    newTask.appendChild(deleteButton);
+//adds the task to the list
+    taskList.appendChild(newTask);
+}
+
+//Clearing the input
+function clearInput(){
+    inputTask.value = "";
+    inputTask.style.border = "";
+    charcount.textContent = "0 / 100";
+}
+
+function addTask(){
+//checks that the input is valid, only runs if the return is true
+    if(validate()){
+        const task = inputTask.value.trim();
+//it was valid, so it creates the task, checkbox and delete button
+        createTasks(task);
+//save the task
+        saveTask();
+//clearing the input
+        clearInput();
+//updates the tasks and makes all task visible
         taskDone();
         showList();
     }
+}
+
+//Adding needed variables and functions for tasks
+addButton.addEventListener("click",function(event){
+    event.preventDefault();
+    addTask();
 });
 
 //Function to check how many tasks are done and display the number under the tasks
 function taskDone() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const checkboxes = document.querySelectorAll('#taskList input[type="checkbox"]');
     let tasksDone = 0;
 //Loop to check how many boxes are checked
     for (let checkbox of checkboxes) {
@@ -76,7 +129,7 @@ function taskDone() {
     const allTasks = checkboxes.length;
 //Making visible how many tasks a person has done
     document.getElementById("taskDone").textContent = tasksDone + "/" + allTasks;
-};
+}
 
 //Function to show all tasks
 function showList(){
@@ -84,7 +137,7 @@ function showList(){
     for (let task of tasks){
         task.hidden = false;
     }
-};
+}
 
 //To use the function when showall button is pressed
 showAll.addEventListener("click", function(){
@@ -93,7 +146,7 @@ showAll.addEventListener("click", function(){
 
 //Show only tasks that that are not done when button is pressed
 activeButton.addEventListener("click", function(){
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    const checkboxes = document.querySelectorAll('#taskList input[type="checkbox"]:checked');
     showList();
     for (let checkbox of checkboxes){
         checkbox.parentElement.hidden = true;
@@ -102,11 +155,37 @@ activeButton.addEventListener("click", function(){
 
 //Show only tasks that are done when button is pressed
 completedButton.addEventListener("click", function(){
+    const checkboxes = document.querySelectorAll('#taskList input[type="checkbox"]:not(:checked)');
     showList();
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(:checked');
     for (let checkbox of checkboxes){
         checkbox.parentElement.hidden = true;
     }
 });
 
-//saveButton.addEventListener("click", save);
+//saving the tasks
+function saveTask(){
+    const tasks = document.querySelectorAll("#taskList li");
+    let saved = [];
+//looping through the tasks and saving all one by one
+    for(let task of tasks){
+        const checkbox = task.querySelector("input[type='checkbox']");
+        const taskInfo = {task: task.dataset.task, completed: checkbox.checked};
+        saved.push(taskInfo);
+    }
+    localStorage.setItem("ToDo", JSON.stringify(saved));
+}
+
+//loading the tasks
+function loadTasks(){
+    const saved = localStorage.getItem("ToDo");
+    if(saved){
+        const tasks = JSON.parse(saved);
+        for(let task of tasks){
+            createTasks(task.task, task.completed);
+        }
+    }
+    taskDone();
+}
+
+//to load all the data
+loadTasks();

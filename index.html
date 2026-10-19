@@ -10,9 +10,11 @@
 <body>
     <div class="content">
         <h1>To do: </h1>
-
-        <input type="text" name="inputTask" id="inputTask" placeholder="Write your task here (min. 3 letters, max.100)">
-        <button id="addButton">Add</button>
+        <form id="taskForm">
+            <input type="text" name="inputTask" id="inputTask" placeholder="Write your task here (min. 3 letters, max.100)" required aria-describedby="inputError">
+            <button id="addButton">Add</button>
+            <span id="inputError" class="error"></span>
+        </form>
         <p id="charcount">0 / 100</p>
 
         <ul id="taskList">
@@ -20,7 +22,6 @@
         </ul>
 
         <p id="tasksDone">Tasks done <span id="taskDone">0/0</span></p>
-        <button id="save">Save</button>
         <button id="showAll">All</button>
         <button id="active">Active</button>
         <button id="completed">Completed</button>

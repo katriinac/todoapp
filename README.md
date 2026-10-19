@@ -1,108 +1,104 @@
 # To Do app
 
-**Tekijä:** Katriina Chindjapin
+**Author:** Katriina Chindjapin
 
-## Projektisuunnitelma
+## Project plan
 
-### Projektin idea
+### Project idea
 
-Sovellus mihin voi merkata tehtäviä, mitä pitää suorittaa. Tehtävät merkataan valmiiksi kun ne ovat suoritettu. Sovellus sopii esimeksiksi opiskelijalle, jolla on paljon kurssitehtäviä.
+An application for tracking tasks that need to be completed. Tasks are marked as finished once they are done. The app is suitable for a student who has a large number of course assignments.
 
-### Suunnitellut toiminnot
+### Planned features
 
-- Toiminto 1: Lisää tehtäviä.
-- Toiminto 2: Poista tehtäviä.
-- Toiminto 3: Merkkaa tehtävät valmiiksi.
-- Toiminto 4: Fitteröi tehtäviä Valimis/Kesken nappuloilla.
+- Feature 1: Add tasks.
+- Feature 2: Remove tasks.
+- Feature 3: Mark tasks as complete.
+- Feature 4: Filter tasks using the "Completed" and "In Progress" buttons.
 
-### Rautalankamalli / luonnos
+### Wireframe / sketch
 
-![Rautalankamalli](img/todoapp.png)
+![wireframe](img/todoapp.png)
 
-## Verkkolinkit
+## Web links
 
-- **Julkaistu sovellus:** [Lisää tähän GitHub Pages -osoite](https://yourusername.github.io/your-repository/)
-- **GitHub-repositorio:** [https://github.com/katriinac/todoapp](https://github.com/katriinac/todoapp)
-- **Projektin videoesittely:** [Lisää tähän videon osoite](https://example.com/)
+- **Published application:** [Lisää tähän GitHub Pages -osoite](https://yourusername.github.io/your-repository/)
+- **GitHub-repository:** [https://github.com/katriinac/todoapp](https://github.com/katriinac/todoapp)
+- **Project video presentation:** [Lisää tähän videon osoite](https://example.com/)
 
-## Tietoja sovelluksesta
+## About the application
 
-**[To Do]** on verkkosovellus, johon voi lisätä tehtäviä mitä haluaa suorittaa. Kun tehtävät ovat suoritettu, niin ne merkataan valmiiksi. Valmiita tai keskeneräisiä tehtäviä voi tarkastella nappien avulla. Tehtävät voi poistaa tarvittaessa.
+**[To Do]** is a web application where you can add tasks you wish to complete. Once tasks are finished, you can mark them as done. You can view completed or incomplete tasks using buttons, and tasks can be deleted if necessary. The application saves data automatically, meaning your information remains preserved even when you refresh the page.
 
-## Teknologiat
+## Technologies
 
-- HTML – sivun rakenne
-- CSS – ulkoasu ja asettelu
-- JavaScript – toiminnallisuus, DOM-skriptaus ja lomakkeiden validointi
-- localStorage – tietojen tallentaminen selaimeen, jos käytit sitä
+- HTML – page structure.
+- CSS – styling and layout.
+- JavaScript – functionality, DOM scripting and form validation.
+- LocalStorage – saving data in the browser.
 
-## Sovelluksen käyttö
+## How to use the application
 
-1. Avaa julkaistu sovellus yllä olevasta linkistä.
-2. Täytä lomakkeen kenttä.
-3. Lisää kohde valmiiksi.
-4. Listää toinen kohde.
-5. Tarkista kohteiden näkyvyyttä Active tai Completed napilla.
-6. Paina All nappia.
-7. Poista valmiit kohdat.
------ kesken
-8. Päivitä sivu ja tarkista, säilyvätkö tiedot selaimessa, jos käytit localStoragea.
+1. Open the published application via the link above.
+2. Fill in the form field.
+3. Add an item and mark it as complete.
+4. Add another item.
+5. Check the visibility of the items using the "Active" or "Completed" buttons.
+6. Click the "All" button.
+7. Delete the completed items.
+8. Refresh the page and verify whether the data persists in the browser.
 
-## Sovelluksen käynnistäminen paikallisesti
+## Running the application locally
 
-1. Kloonaa tai lataa tämä repositorio omalle koneellesi.
-2. Avaa projektikansio.
-3. Avaa `index.html` selaimessa.
+1. Clone or download this repository to your computer.
+2. Open the project folder.
+3. Open `index.html` in a web browser.
 
-## Kuvakaappaukset
+## Screenshots
 
-![Kuvakaappaus sovelluksesta](img/completed.png)
+![Screenshot of the application](img/completed.png)
 
-## Tunnetut virheet / puutteet
+## Known issues / limitations
 
-- Punainen reunus häviää inpustista vasta, kun uusi tehtävä on lisätty.
-- Jos ei ole aktiivista tai valmista tehtävää kun active/completed nappia painetaan, näyttää sovellus tyhjää.
+- The red border around the input field disappears only once a new task has been added.
+- If there are no active or completed tasks when the "active/completed" button is pressed, the application displays an empty state.
 
-## Oma arvio ja oppimisen reflektointi
+## Self-assessment and learning reflection
 
-Pohdi työtäsi ja oppimisprosessiasi.
+- What did I succeed at? I feel like I managed to build a functional application well, and all the requirements are met.
 
-- Missä onnistuin? Sain mielestäni hyvin rakennettua toimivan sovelluksen ja kaikki vaatimukset toteutuvat.
-- Mikä oli haastavaa? CSS:n lisääminen sivulle, checkboxien lisääminen ja poisto-toiminnon lisääminen.
-- Mitä parantaisin, jos aikaa olisi enemmän? Jakaisin koodin selkeämmin osiin ja miettisin tapoja, miten voisin kirjoittaa koodin helpommin/lyhyemmin. Panostaisin vielä enemmän ulkonäköön.
-- Mitä opin HTML:stä, CSS:stä, JavaScriptistä ja DOM-skriptauksesta? Käyttämällä näitä kaikkia, pystyy rakentamaan kaikenlaisia pieniä verkkosovelluksia.
-- Oma arvio projektista: **10/10 pistettä**
+- What was challenging? Writing clean code. Towards the end, I had to figure out how to make the code clearer, as I had initially put almost everything into a single function, making the code look quite messy. Eventually, I managed to break the code down into separate functions, which significantly improved its clarity. Implementing localStorage was also a bit tricky, as I needed to store data consisting of more than just a single line (requiring a loop to iterate through everything).
 
-## Lähteet ja kiitokset
+- What would I improve if I had more time? I would put even more effort into the visual design.
 
-Käytin aijemmin tehtyjeni Workshop tehtäviä apuna koodin luomiseen (enimmäkseen workshop03 ja workshop04). (https://github.com/katriinac/web-development-1)
+- What did I learn about HTML, CSS, JavaScript, and DOM scripting? By using all of these, it is possible to build various types of small web applications.
 
-Käytin myös paljon W3schools esimerkkejä apuna (enimmäkseen CSS).
+- My self-assessed project grade: **10/10 points**
 
-- [HTML DOM Input Checkbox Object - GeeksForGeeks](https://www.geeksforgeeks.org/html/html-dom-input-checkbox-object/) Käytin tutoriaalia apuna valintaruutujen luomiseen.
+## Sources and acknowledgements
 
-- [How to get all checked checkbox values using JavaScript by Joshua Colvin](https://www.joshuacolvin.net/blog/selected-checkbox-values/) Opin tutoriaalista, että voin käyttää querySelectorAll ja :checked, jonka avuilla sain tehtävät näkyviin painikkeita painaessa.
+I used the Workshop assignments I had completed earlier to help with creating the code (mostly Workshop04 and Workshop05). (https://github.com/katriinac/web-development-1)
 
-- [HTML DOM Document createTextNode() W3Schools](https://www.w3schools.com/jsref/met_document_createtextnode.asp) Opin miten createTextNode toimii.
+I also made use of W3Schools examples (mostly CSS).
 
-- [CSS Margins W3Schools](https://www.w3schools.com/css/css_margin.asp) Opin, mitä eri margin ominaisuudet tekee ja mitä niistä tarvitsen projektiini.
+- [HTML DOM Input Checkbox Object - GeeksForGeeks](https://www.geeksforgeeks.org/html/html-dom-input-checkbox-object/) I used the tutorial to help create the checkboxes.
 
-- [CSS Fonts W3Schools](https://www.w3schools.com/css/css_font.asp) Etin fontin projektiini.
+- [How to get all checked checkbox values using JavaScript by Joshua Colvin](https://www.joshuacolvin.net/blog/selected-checkbox-values/) I learned from a tutorial that I can use querySelectorAll and input[type="checkbox"]:checked, which allowed me to add the checkboxes.
 
-- Kaikki käyttämät kuvat olen luonut itse käyttämällä paint.net ohjelmaa.
+- [CSS Margins W3Schools](https://www.w3schools.com/css/css_margin.asp) I learned what the different margin properties do and which ones I need for my project.
 
-- Käytetty tekoälytyökalu: ChatGPT
+- [CSS Fonts W3Schools](https://www.w3schools.com/css/css_font.asp) I used it to find a font for my project.
 
-  - Miten työkalua käytettiin: Tehtävän poistettua, en saanut päivitettyä "tasks done 0/2" kohtaa (laski edelleen tehtäviä mitkä oli poistettu.). Kysyin tekoälyltä mitä koodissa oli vikana ja sain vastaukseksi selityksen, mikä ja missä oli vikaa. Olin merkannut funktiokutsut väärään kohtaan, jonka takia se ei päivittänyt tehtävien määrää.
+- I have created all the images used myself, using the program Paint.NET.
 
-  - Kysyin miten saan jokaiselle poisto-napille oman id:n. Laitoin osan koodistani tekoälyyn, joka sitten neuvoi lisäämään osan koodia joka kasvattaa ID muuttujaa, jotta kaikilla näppäimillä olisi eri id.
+- AI tool used: ChatGPT
 
-  - Kysyin apua miten pystyn muokkaamaan valintaruudun ulkonäköä, siten että siihen jää ✓ näkyviin kun sitä on painettu. Sain vastaukseksi "input[type="checkbox"]:checked::after" kohdan css tiedostossa.
+  - How the tool was used: After deleting a task, the "tasks done 0/2" counter failed to update (it continued to count tasks that had already been deleted). I asked the AI ​​what was wrong with the code, and it explained the location of the error. I had placed the function calls in the wrong spot, which prevented the task count from updating.
+
+  - I asked how to assign an unique ID to each delete button. I provided a portion of my code to the AI, which suggested adding a snippet that increments an ID variable, ensuring every button gets a distinct ID (deleteButton.id = "btn" + deleteButtonId; deleteButtonId++).
+
+  - I asked for help with customizing the appearance of a checkbox so that a checkmark (✓) remains visible after it has been clicked. The AI ​​suggested using the input[type="checkbox"]:checked::after selector in the CSS file.
 
 
-  ## Lisenssi
+  ## License
 
-Tämä projekti on lisensoitu MIT-lisenssillä.
-
-Lisätietoa lisenssin lisäämisestä GitHub-projektiin:
-https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository
+This project is licensed under the MIT License.
