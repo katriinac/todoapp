@@ -76,9 +76,9 @@ An application for tracking tasks that need to be completed. Tasks are marked as
 
 ## Sources and acknowledgements
 
-I used the Workshop assignments I had completed earlier to help with creating the code (mostly Workshop04 and Workshop05). (https://github.com/katriinac/web-development-1)
+- I used the Workshop assignments I had completed earlier to help with creating the code (mostly Workshop04 and Workshop05). (https://github.com/katriinac/web-development-1)
 
-I also made use of W3Schools examples (mostly CSS).
+- I also made use of W3Schools examples (mostly CSS).
 
 - [HTML DOM Input Checkbox Object - GeeksForGeeks](https://www.geeksforgeeks.org/html/html-dom-input-checkbox-object/) I used the tutorial to help create the checkboxes.
 
