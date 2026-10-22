@@ -23,7 +23,7 @@ An application for tracking tasks that need to be completed. Tasks are marked as
 
 - **Published application:** [Lisää tähän GitHub Pages -osoite](https://yourusername.github.io/your-repository/)
 - **GitHub-repository:** [https://github.com/katriinac/todoapp](https://github.com/katriinac/todoapp)
-- **Project video presentation:** [Lisää tähän videon osoite](https://example.com/)
+- **Project video presentation:** [Lisää tähän videon osoite](https://www.youtube.com/watch?v=0_MObplMJPc)
 
 ## About the application
 
