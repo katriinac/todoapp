@@ -21,7 +21,7 @@ An application for tracking tasks that need to be completed. Tasks are marked as
 
 ## Web links
 
-- **Published application:** [Lisää tähän GitHub Pages -osoite](https://yourusername.github.io/your-repository/)
+- **Published application:** [Lisää tähän GitHub Pages -osoite](https://katriinac.github.io/todoapp/)
 - **GitHub-repository:** [https://github.com/katriinac/todoapp](https://github.com/katriinac/todoapp)
 - **Project video presentation:** [Lisää tähän videon osoite](https://www.youtube.com/watch?v=0_MObplMJPc)
 
